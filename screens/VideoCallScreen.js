@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-const VideoCallScreen = props => {
+const VideoCallScreen = () => {
     return (
         <View style={style.screen}>
             <Text>This is Video Call Page!</Text>
