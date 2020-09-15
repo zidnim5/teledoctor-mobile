@@ -12,10 +12,10 @@ import Ads from '../components/Ads';
 import Fasilities from '../components/Fasilities';
 
 
-const DashboardScreen = () => {
+const DashboardScreen = (props) => {
     return (
         <View style={{flex:1, backgroundColor: '#f3f3f3'}}>
-            <FloatBtn />
+            <FloatBtn navigation={props.navigation} />
             
             <ScrollView style={{backgroundColor: '#ffff'}}>
                 <Banner />   
