@@ -3,7 +3,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import SplashScreen from '../screens/SplashScreen';
 import DashboardScreen from '../screens/DashboardScreen';
-import VideoScreen from '../screens/VideoCallScreen';
+import DoctorList from '../screens/DoctorList';
+import VideoScreen from '../screens/VideoScreen';
 
 
 const splash = createStackNavigator({
@@ -19,8 +20,18 @@ const splash = createStackNavigator({
             headerLeft: ()=> null,
         }
     },
-    Video: {
+    DoctorList: {
+        screen: DoctorList,
+        navigationOptions: {
+            title: 'Doctor'
+        }
+    },
+    VideoCall: {
         screen: VideoScreen,
+        navigationOptions: {
+            title: 'Video Call',
+            headerShown: false,
+        }
     }
 });
 
