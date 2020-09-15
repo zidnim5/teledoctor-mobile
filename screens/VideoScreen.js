@@ -27,7 +27,7 @@ const VideoCall = props => {
     return (
         <View style={style.screen}>
             <View style={style.video_room}>
-                <View style={{height: 100, width: 100, borderWidth: 1, position: "relative", marginTop: 100, marginLeft: 50, backgroundColor: '#dddd'}}>
+                <View style={{height: 120, width: 100, borderWidth: 1, position: "absolute",zIndex:1, marginTop: 50, right: 0, marginRight: 20, backgroundColor: '#aaaa'}}>
 
                 </View>
                 <Camera style={{ flex: 1 }} type={type}>
