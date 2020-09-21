@@ -2,14 +2,35 @@ import {createAppContainer} from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import SplashScreen from '../screens/SplashScreen';
-import DashboardScreen from '../screens/DashboardScreen';
-import DoctorList from '../screens/DoctorList';
-import VideoScreen from '../screens/VideoScreen';
+import WelcomeScreen from '../screens/WelcomeScreen';
+import LoginScreen from '../screens/AuthScreen/LoginScreen';
+import RegisterScreen from '../screens/AuthScreen/RegisterScreen';
+import DashboardScreen from '../screens/MainScreen/DashboardScreen';
+import DoctorList from '../screens/MainScreen/DoctorList';
+import VideoScreen from '../screens/MainScreen/VideoScreen';
 
 
 const splash = createStackNavigator({
     Splash: {
         screen: SplashScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    }, 
+    Welcome: {
+        screen: WelcomeScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    }, 
+    Login: {
+        screen: LoginScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    }, 
+    Register: {
+        screen: RegisterScreen,
         navigationOptions: {
             headerShown: false,
         }

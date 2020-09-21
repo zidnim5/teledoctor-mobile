@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 
 import {Entypo} from '@expo/vector-icons';
-import Rating from '../components/StarRating';
+import Rating from '../../components/StarRating';
 
-import CardList from '../components/CardList';
-import CardListDeactive from '../components/CardListDeactive';
+import CardList from '../../components/CardList';
+import CardListDeactive from '../../components/CardListDeactive';
 
 const DoctorList = (props) => {
     return (

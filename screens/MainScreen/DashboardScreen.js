@@ -5,11 +5,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Swiper from 'react-native-swiper'
 import { Entypo, MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'; 
 
-import FloatBtn from '../components/FloatingButton';
-import Rating from '../components/StarRating';
-import Banner from '../components/Banner';
-import Ads from '../components/Ads';
-import Fasilities from '../components/Fasilities';
+import FloatBtn from '../../components/FloatingButton';
+import Rating from '../../components/StarRating';
+import Banner from '../../components/Banner';
+import Ads from '../../components/Ads';
+import Fasilities from '../../components/Fasilities';
 
 
 const DashboardScreen = (props) => {
@@ -33,7 +33,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/doctor1.jpg')}
+                                    source={require('../../assets/doctor1.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -47,7 +47,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/doctor2.png')}
+                                    source={require('../../assets/doctor2.png')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -61,7 +61,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/doctor3.jpg')}
+                                    source={require('../../assets/doctor3.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -75,7 +75,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/doctor1.jpg')}
+                                    source={require('../../assets/doctor1.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -89,7 +89,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/doctor2.png')}
+                                    source={require('../../assets/doctor2.png')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -103,7 +103,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/doctor3.jpg')}
+                                    source={require('../../assets/doctor3.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -132,7 +132,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/product1.jpg')}
+                                    source={require('../../assets/product1.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -146,7 +146,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/product2.png')}
+                                    source={require('../../assets/product2.png')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -161,7 +161,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/product1.jpg')}
+                                    source={require('../../assets/product1.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -175,7 +175,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/product2.png')}
+                                    source={require('../../assets/product2.png')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -189,7 +189,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/product1.jpg')}
+                                    source={require('../../assets/product1.jpg')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />
@@ -203,7 +203,7 @@ const DashboardScreen = (props) => {
                         <View style={style.card}>
                             <View style={{flex: 3}}>
                                 <Image 
-                                    source={require('../assets/product2.png')}
+                                    source={require('../../assets/product2.png')}
                                     resizeMode= 'stretch'
                                     style={style.card_image} 
                                 />

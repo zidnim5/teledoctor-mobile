@@ -1,31 +1,32 @@
-import React from 'react';
-import { Text, View, StyleSheet, Dimensions,StatusBar, TouchableOpacity } from 'react-native';
+import React, { useEffect } from 'react';
+import { Text, View, StyleSheet, Dimensions,StatusBar, TouchableOpacity, Image } from 'react-native';
+import Colors from '../constants/Colors';
 import * as Animatable from 'react-native-animatable';
 
 
 const SplashScreen = props => {
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            props.navigation.navigate('Welcome');
+            console.log('oke')
+        }, 3000);
+        return () => clearTimeout(timer);
+      }, []);
+
     return (
         <View style={style.screen}>
             <StatusBar barStyle="light-content" />
             <View style={style.header}>
-                <Animatable.Text animation="bounceIn" duration={1500} style={style.headerText}>TELEDOCTOR</Animatable.Text>
+                <Animatable.Image 
+                animation="bounceIn" duration={1000}
+                style={{width: '50%', height: 100,resizeMode : 'stretch' }}
+                source={{uri:"https://image.freepik.com/free-vector/d-logo-business-company_125964-110.jpg"}} />
+                <Animatable.Text animation="" duration={3000} delay={1000} style={{marginTop: 10, fontSize: 18, fontWeight: 'normal', color: Colors.textColor}}>APPLICATION</Animatable.Text>
             </View>
-
-            <Animatable.View
-            animation= "fadeInUpBig"
-            duration={1500}
-            style={style.footer}>
-                <Text style={style.footerTitle}> Welcome </Text>
-                <Text style={style.footerTitle}> Stay Connect With Us </Text>
-                <Text style={style.footerDesc}> Click button below to continue </Text>
-                <View 
-                style={style.button}>
-                    <TouchableOpacity  style={style.continue} onPress={()=>props.navigation.navigate('Dashboard')}>
-                        <Text style={style.continueText}>Continue</Text>
-                    </TouchableOpacity >
-                </View>
-            </Animatable.View>
+            <View style={{ flex: 0.2, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 12,color: Colors.textColor }}>PT. KAILA INDONESIA BERDAYA</Text>
+            </View>
         </View>
     );
 };
@@ -36,7 +37,7 @@ const height_logo = height *  0.7 * 0.4;
 const style = StyleSheet.create({
     screen: {
         flex: 1,
-        backgroundColor: '#05375a'
+        backgroundColor: Colors.primary
     },
     imageLogo: {
         height: height_logo,
@@ -46,10 +47,11 @@ const style = StyleSheet.create({
         flex: 2,
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: -100
     },
     headerText: {
         fontSize: 40,
-        color: '#ffff',
+        color: Colors.textColor,
         fontWeight: 'bold'
     },
     footer: {
@@ -59,34 +61,6 @@ const style = StyleSheet.create({
         borderTopRightRadius: 30,
         padding: 25
     },
-    footerTitle: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        color: '#05375a'
-
-    },
-    footerDesc: {
-        fontSize: 14,
-        marginLeft: 5,
-    },
-    button: {
-        alignItems: 'flex-end',
-        marginTop: 40,
-    },
-    continue: {
-        height: 40,
-        width: 250,
-        backgroundColor: '#5db8fa',
-        borderRadius: 20,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    continueText: {
-        fontSize: 18,
-        color: '#ffff',
-        fontWeight: 'bold'
-    }
 });
 
 export default SplashScreen;
